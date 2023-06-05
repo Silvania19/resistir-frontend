@@ -1,0 +1,59 @@
+.oscilacion{
+    position: absolute;
+    width: 296px;
+    height: 209px;
+    left: 32px;
+    top: 473px;
+
+    background: #53F9A9;
+    border-radius: 10px;
+}
+.textOscilacion{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+}
+.rango{
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+
+    color: #000000;
+}
+.currentTemperature{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 121px;
+    /* identical to box height */
+    color: #000000;
+}
+
+.textTemperature{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+
+color: #000000;
+}
+
+.addTemperature{
+width: 300px;
+height: 100px;
+left: 40px;
+top: 104px;
+
+background: #D9D9D9;
+border-radius: 10px;
+}
