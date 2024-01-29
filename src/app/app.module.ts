@@ -5,18 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TemperatureAddComponent } from './components/temperature-add/temperature-add.component';
 import { HomeComponent } from './components/home/home.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     TemperatureAddComponent,
-    HomeComponent,
-    NavbarComponent
-  ],
+    HomeComponent  ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
