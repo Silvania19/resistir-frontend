@@ -1,30 +1,25 @@
-<div>
-    <table class="table table-borderless">
-        <div class="textTemperature">
-            <thead>
-                <tr><th scope="col">Temperatura actual</th></tr>
-             </thead>
+<div class="container flexway"> 
+
+   <!-- DIV TEMP -->
+    <div class="flexway wh100" >
+        <div class="container-button" >
+            <button class="add-temp-button">+ Agregar temperatura optima</button>
         </div>
-        <div class="currentTemperature">
-             <tbody>
-                <tr><th scope="row">{{currentTemperature}}</th></tr>
-            </tbody>
+        <div class="temp-container" >
+            <p class="title-temp">Temperatura actual</p>
+            <p class="current-temp"><span>{{ currentTemperature }}</span>°C</p>
         </div>
-       
-    </table>
+   </div>
+
+   <!-- DIV RANGO -->
+  <div class="flexway wh100">
+    <div class="oscilacion">
+            <p>Rango de oscilacion</p>   
+        <p>Min: <span> 18°C</span></p>
+        <p>Max: <span> 20°C</span></p>
+    </div>
+    
+    </div>
+
 </div>
-<div class="oscilacion">
-        <table class="table table-borderless" >
-            <div class="textOscilacion">
-                <thead>
-                    <tr><th scope="col">Rango de oscilacion</th></tr>
-                </thead>
-            </div> 
-            <div class="rango">
-                <tbody>
-                    <tr><th scope="row">Min: 18°C</th></tr>
-                    <tr><th scope="row"> Max: 20°C</th></tr>
-                </tbody>
-            </div>
-        </table>
-</div>
+

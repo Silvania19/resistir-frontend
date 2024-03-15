@@ -12,13 +12,13 @@ export class HomeComponent implements OnInit {
   
   currentTemperature ? : Number;
 
-  constructor(private temeratureService: TemperatureServiceService) { }
+  constructor(private temperatureService: TemperatureServiceService) { }
 
   ngOnInit(): void {
     this.getSubjects();
   }
   getSubjects(){
-    this.temeratureService.getTemperature().pipe(
+    this.temperatureService.getTemperature().pipe(
       map((val: Temperature)=>{
         this.currentTemperature= val.numberTemperature;
       })
