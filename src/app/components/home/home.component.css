@@ -8,6 +8,7 @@
     background: #53F9A9;
     padding: 20px;
     border-radius: 10px; 
+    text-align: center;
 }
 
 .flexway{
@@ -46,4 +47,9 @@
 .current-temp{
     font-size: 3rem; 
     font-weight: bold;
+}
+
+.temp-min-max{
+    font-weight: bold;
+    font-size: x-large;
 }
