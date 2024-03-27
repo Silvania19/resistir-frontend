@@ -7,16 +7,15 @@
          <p class="add-range-text">de temperatura</p>
          <p class="celsius-degrees">(En grados celcius)</p>
        
-        <!--<form (ngSubmit)="guardarRango()" class="form-temp">-->
-        <form class="form-temp">
+        <form (ngSubmit)="saveRange()" [formGroup]="formTemp" class="form-temp">
           <div>
-            <span>MIN</span><input class="input-temp" type="number" /><span>°C</span>
+            <span>MIN</span><input formControlName="minTemp" class="input-temp" type="number" /><span>°C</span>
           </div>
             <div>
-              <span>MAX</span><input class="input-temp" type="number" /><span>°C</span>
+              <span>MAX</span><input formControlName="maxTemp" class="input-temp" type="number" /><span>°C</span>
             </div>
             
-            <button type="submit" class="button-save-temp">GUARDAR</button>
+            <button [disabled]="formTemp.invalid" type="submit" class="button-save-temp">GUARDAR</button>
          </form>
   
         </div>
