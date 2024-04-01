@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { map } from 'rxjs';
+import { SaveTemperature } from 'src/app/models/save-temperature';
 import { TemperatureServiceService } from 'src/app/services/temperature-service.service';
 
 @Component({
@@ -21,7 +23,11 @@ export class TemperatureAddComponent implements OnInit {
   }
 
   saveRange(){
-    this.tempService.setTemperature(this.formTemp.value);
+    let saveTemperature = new SaveTemperature();
+    saveTemperature.maxTemperature = this.formTemp.value.maxTemp;
+    saveTemperature.minTemperature = this.formTemp.value.minTemp;
+   this.tempService.setTemperature(saveTemperature).subscribe();
+    
   }
 
 }

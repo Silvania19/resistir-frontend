@@ -6,7 +6,7 @@ export const generalConfig = {
     temperature: {
       // Get
       getTemperatura: '/app/temperature/getTemperature',
-      updatedTempera: ''
+      setTemperature: '/app/temperature/setTemperature'
     },
   }
 };
