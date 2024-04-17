@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Temperature } from '../models/temperature';
 import { Observable } from 'rxjs';
-import { TemplateLiteralElement } from '@angular/compiler';
 import { SaveTemperature } from '../models/save-temperature';
 
 @Injectable({
@@ -16,13 +15,13 @@ export class TemperatureServiceService {
 
   urlGetTemperature: string =
   this.baseUrl + environment.services.temperature.getTemperatura;
-  urlSetTemperature : string =  this.baseUrl + environment.services.temperature.setTemperature;
+  urlSetTemperatures : string =  this.baseUrl + environment.services.temperature.setRangeTemperature;
 
   getTemperature():Observable<Temperature>{
     return this.httpClient.get(this.urlGetTemperature);
   }
 
-  setTemperature(saveTemperature: SaveTemperature):Observable<any>{
+  setRangeTemperature(setRangeTemperature: SaveTemperature):Observable<any>{
     
     const httpOptions = {
       headers: new HttpHeaders({
@@ -30,9 +29,9 @@ export class TemperatureServiceService {
       })
     };
   
-    console.log(saveTemperature);    
-    console.log(this.urlSetTemperature);   
-    return this.httpClient.post(this.urlSetTemperature, saveTemperature, httpOptions);
+    console.log(setRangeTemperature);    
+    console.log(this.urlSetTemperatures);   
+    return this.httpClient.post(this.urlSetTemperatures, setRangeTemperature, httpOptions);
   }
 
 }
