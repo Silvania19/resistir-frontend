@@ -1,5 +1,5 @@
 .container {
-    height: 100vh;
+    height: 85vh;
     background-color: #4AD592; 
 }
 
@@ -37,8 +37,12 @@
     background-color: #53F9A9;
 }
 
-.wh100{
+.div-form{
     width: 100%; 
+    height: 60%; 
+}
+
+.height-form{
     height: 100%;
 }
 
@@ -54,7 +58,7 @@
 
 .rango{
     text-align: center; 
-    height: 100%;  
+    height: 40%;  
     width: 100%;
 }
 

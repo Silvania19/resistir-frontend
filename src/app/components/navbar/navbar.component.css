@@ -9,7 +9,8 @@
     font-family: montserrat;
   }
   nav{
-    background: #0082e6;
+    /*background: #0082e6;*/
+    background: #525252;
     height: 80px;
     width: 100%;
   }
