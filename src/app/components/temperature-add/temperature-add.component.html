@@ -15,6 +15,8 @@
               <span>MAX</span><input formControlName="maxTemp" class="input-temp" type="number" /><span>°C</span>
             </div>
             
+            <p> {{tempMessage}} </p>
+
             <button [disabled]="formTemp.invalid" type="submit" class="button-save-temp">GUARDAR</button>
          </form>
   
