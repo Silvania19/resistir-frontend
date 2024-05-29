@@ -25,10 +25,10 @@ export class TemperatureAddComponent implements OnInit {
     this.formTemp.valueChanges.subscribe((value : any) => {
       
       if(value.minTemp != null && value.maxTemp != null){
-        if(value.maxTemp < value.minTemp){
-          this.tempMessage = "Maximo no puede ser menor a minimo"          
+        if(value.maxTemp <= value.minTemp){
+          this.tempMessage = "Maximo no puede ser menor a minimo ni igual";          
         } else if(this.formTemp.invalid){
-          this.tempMessage = "error de rango";          
+          this.tempMessage = "Error de rango, valores aceptados desde 15 grados hasta 30";          
         }
         else{
           this.tempMessage = "";

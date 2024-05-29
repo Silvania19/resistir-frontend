@@ -15,7 +15,7 @@
               <span>MAX</span><input formControlName="maxTemp" class="input-temp" type="number" /><span>°C</span>
             </div>
             
-            <p> {{tempMessage}} </p>
+            <p class="text-message"> {{tempMessage}} </p>
 
             <button [disabled]="formTemp.invalid" type="submit" class="button-save-temp">GUARDAR</button>
          </form>
@@ -29,7 +29,7 @@
      <div class="container-rango" >
       <p>Rango actual de temperatura</p>   
          <p class="temp-min-max">Min: <span> 18°C</span></p>
-         <p class="temp-min-max">Max: <span> 20°C</span></p>
+         <span class="temp-min-max">Max: <span> 20°C</span></span>
      </div>
      
      </div>

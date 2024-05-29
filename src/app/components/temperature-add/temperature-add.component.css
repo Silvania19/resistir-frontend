@@ -1,3 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;
+  }
+
 .container {
     height: 85vh;
     background-color: #4AD592; 
@@ -38,7 +43,7 @@
 }
 
 .div-form{
-    width: 100%; 
+    width: 90%; 
     height: 60%; 
 }
 
@@ -52,6 +57,11 @@
 
 .celsius-degrees{
     font-style: italic;
+}
+
+.text-message{
+    height: 45px;
+    width: 250px;
 }
 
 /* RANGO */
