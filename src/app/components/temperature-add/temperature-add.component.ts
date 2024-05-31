@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { max } from 'rxjs';
 import { SaveTemperature } from 'src/app/models/save-temperature';
 import { TemperatureServiceService } from 'src/app/services/temperature-service.service';
+import { maxHigherMin } from 'src/app/validators/max-higher-min';
 
 @Component({
   selector: 'app-temperature-add',
@@ -18,9 +20,9 @@ export class TemperatureAddComponent implements OnInit {
 
   ngOnInit(): void {
     this.formTemp = new FormGroup({
-      minTemp: new FormControl(null,[Validators.required, Validators.min(15), Validators.max(25)]),
-      maxTemp: new FormControl(null,[Validators.required, Validators.min(20), Validators.max(30)])
-    })
+      minTemp: new FormControl(null,[Validators.required, Validators.min(15), Validators.max(30)]),
+      maxTemp: new FormControl(null,[Validators.required, Validators.min(15), Validators.max(30)])
+    }, {validators: maxHigherMin()});
 
     this.formTemp.valueChanges.subscribe((value : any) => {
       

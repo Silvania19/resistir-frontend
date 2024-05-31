@@ -15,7 +15,15 @@
               <span>MAX</span><input formControlName="maxTemp" class="input-temp" type="number" /><span>°C</span>
             </div>
             
-            <p class="text-message"> {{tempMessage}} </p>
+            <!--<p class="text-message"> {{tempMessage}} </p>-->
+
+            <div class="text-message" *ngIf="(formTemp.get('minTemp')?.invalid || formTemp.get('maxTemp')?.invalid) && (formTemp.touched || formTemp.dirty)">
+              Error de rango, valores aceptados desde 15 grados hasta 30.
+            </div>
+
+            <div class="text-message" *ngIf="formTemp.hasError('maxHigherMinMatch') && (formTemp.touched || formTemp.dirty) && !((formTemp.get('minTemp')?.invalid) || (formTemp.get('maxTemp')?.invalid))">
+              Maximo no puede ser menor a minimo ni igual.
+            </div>
 
             <button [disabled]="formTemp.invalid" type="submit" class="button-save-temp">GUARDAR</button>
          </form>
