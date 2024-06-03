@@ -4,7 +4,7 @@ import { TemperatureAddComponent } from './components/temperature-add/temperatur
 import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-  { path : 'addTemperature', component: TemperatureAddComponent},
+  { path : 'add-temperature', component: TemperatureAddComponent},
   { path : 'home', component: HomeComponent},
   {path: "**", redirectTo: "", component: HomeComponent},
 
