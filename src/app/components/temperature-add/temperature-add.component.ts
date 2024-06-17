@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { max } from 'rxjs';
 import { SaveTemperature } from 'src/app/models/save-temperature';
 import { TemperatureServiceService } from 'src/app/services/temperature-service.service';
 import { maxHigherMin } from 'src/app/validators/max-higher-min';
