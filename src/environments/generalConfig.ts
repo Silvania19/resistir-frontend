@@ -8,7 +8,6 @@ export const generalConfig = {
       getTemperatura: '/app/temperature/getTemperature',
 
       //Post
-      setTemperature: '/app/temperature/setTemperature',
       setRangeTemperature: '/app/temperature/setRangeTemperature'
     },
   }
