@@ -6,6 +6,7 @@ export const generalConfig = {
     temperature: {
       // Get
       getTemperatura: '/app/temperature/getTemperature',
+      getRangeTemperature: '/app/temperature/getRangeTemperature',
 
       //Post
       setRangeTemperature: '/app/temperature/setRangeTemperature'

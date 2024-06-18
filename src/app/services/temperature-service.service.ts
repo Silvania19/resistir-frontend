@@ -17,6 +17,8 @@ export class TemperatureServiceService {
   this.baseUrl + environment.services.temperature.getTemperatura;
   urlSetTemperatures : string =  this.baseUrl + environment.services.temperature.setRangeTemperature;
 
+  urlGetRangeTemperature : string =  this.baseUrl + environment.services.temperature.getRangeTemperature;
+
   getTemperature():Observable<Temperature>{
     return this.httpClient.get(this.urlGetTemperature);
   }
@@ -33,5 +35,7 @@ export class TemperatureServiceService {
     console.log(this.urlSetTemperatures);   
     return this.httpClient.post(this.urlSetTemperatures, setRangeTemperature, httpOptions);
   }
-
+  getRangeTemperature():Observable<any>{
+      return this.httpClient.get(this.urlGetRangeTemperature);
+  }
 }
