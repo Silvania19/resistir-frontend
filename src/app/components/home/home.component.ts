@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, map } from 'rxjs';
+import { map } from 'rxjs';
 import { RangeTemperature } from 'src/app/models/range-temperature';
 import { Temperature } from 'src/app/models/temperature';
 import { TemperatureServiceService } from 'src/app/services/temperature-service.service';
@@ -12,7 +12,7 @@ import { TemperatureServiceService } from 'src/app/services/temperature-service.
 export class HomeComponent implements OnInit {
   
   currentTemperature ? : Number;
-   rangeTemperature = new RangeTemperature();
+  public rangeTemperature = new RangeTemperature();
 
   constructor(private temperatureService: TemperatureServiceService) { }
 
@@ -26,23 +26,16 @@ export class HomeComponent implements OnInit {
         this.currentTemperature= val.numberTemperature;
       })
     )
-    .subscribe(
-      (val) => {
-    
-      }
-    );    
+    .subscribe();
   }
+
   getRangeTemperature(){
     this.temperatureService.getRangeTemperature().pipe(
       map((val: RangeTemperature)=>{
-        this.rangeTemperature?.maxTemperature = val.maxTemperature;
-        this.rangeTemperature?.minTemperature = val.minTemperature;
+        this.rangeTemperature.maxTemperature = val.maxTemperature;
+        this.rangeTemperature.minTemperature = val.minTemperature;
       })
     )
-    .subscribe(
-      (val) => {
-    
-      }
-    );    
+    .subscribe();    
   }
 }

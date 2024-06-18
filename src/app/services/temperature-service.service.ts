@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { Temperature } from '../models/temperature';
 import { Observable } from 'rxjs';
 import { SaveTemperature } from '../models/save-temperature';
+import { RangeTemperature } from '../models/range-temperature';
 
 @Injectable({
   providedIn: 'root'
@@ -13,9 +14,8 @@ export class TemperatureServiceService {
   constructor( private httpClient: HttpClient) { }
   private baseUrl: string = environment.url.protocol + environment.url.url;
 
-  urlGetTemperature: string =
-  this.baseUrl + environment.services.temperature.getTemperatura;
-  urlSetTemperatures : string =  this.baseUrl + environment.services.temperature.setRangeTemperature;
+  urlGetTemperature: string = this.baseUrl + environment.services.temperature.getTemperatura;
+  urlSetTemperatures : string = this.baseUrl + environment.services.temperature.setRangeTemperature;
 
   urlGetRangeTemperature : string =  this.baseUrl + environment.services.temperature.getRangeTemperature;
 
@@ -35,7 +35,8 @@ export class TemperatureServiceService {
     console.log(this.urlSetTemperatures);   
     return this.httpClient.post(this.urlSetTemperatures, setRangeTemperature, httpOptions);
   }
-  getRangeTemperature():Observable<any>{
+
+  getRangeTemperature():Observable<RangeTemperature>{
       return this.httpClient.get(this.urlGetRangeTemperature);
   }
 }
