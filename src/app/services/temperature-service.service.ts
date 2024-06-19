@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Temperature } from '../models/temperature';
 import { Observable } from 'rxjs';
-import { SaveTemperature } from '../models/save-temperature';
 import { RangeTemperature } from '../models/range-temperature';
 
 @Injectable({
@@ -23,16 +22,13 @@ export class TemperatureServiceService {
     return this.httpClient.get(this.urlGetTemperature);
   }
 
-  setRangeTemperature(setRangeTemperature: SaveTemperature):Observable<any>{
-    
+  setRangeTemperature(setRangeTemperature: RangeTemperature):Observable<RangeTemperature>{    
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type':  'application/json',
       })
     };
-  
-    console.log(setRangeTemperature);    
-    console.log(this.urlSetTemperatures);   
+    
     return this.httpClient.post(this.urlSetTemperatures, setRangeTemperature, httpOptions);
   }
 
