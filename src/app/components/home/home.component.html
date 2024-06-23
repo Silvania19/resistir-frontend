@@ -7,7 +7,7 @@
         </div>
         <div class="temp-container" >
             <p class="title-temp">Temperatura actual</p>
-            <p class="current-temp"><span>{{ currentTemperature }}</span>°C</p>
+            <p class="current-temp"><span>{{ currentTemperature ? currentTemperature + '°C' : 'Esperando temperatura...' }}</span></p>
         </div>
    </div>
 
