@@ -3,7 +3,7 @@ import { Subscription, interval, map, takeWhile } from 'rxjs';
 import { RangeTemperature } from 'src/app/models/range-temperature';
 import { Temperature } from 'src/app/models/temperature';
 import { TemperatureServiceService } from 'src/app/services/temperature-service.service';
-const INTERVAL_API = 2000;
+const INTERVAL_API = 5000;
 
 @Component({
   selector: 'app-home',
@@ -24,7 +24,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.getRangeTemperature();
 
     this.intervalSubscription = this.source.subscribe(() => {
-      //this.setInitialRange();      
       this.getCurrentTemperature();
     });
   }
@@ -54,23 +53,5 @@ export class HomeComponent implements OnInit, OnDestroy {
         })
       )
       .subscribe();
-  }
-
-  setInitialRange() {
-    let setRangeTemperature = new RangeTemperature();
-
-    this.temperatureService
-      .getRangeTemperature()
-      .pipe(
-        map((val: RangeTemperature) => {
-          setRangeTemperature.maxTemperature = val.maxTemperature;
-          setRangeTemperature.minTemperature = val.minTemperature;
-        })
-      )
-      .subscribe(() => {
-        this.temperatureService
-          .setRangeTemperature(setRangeTemperature)
-          .subscribe();
-      });
   }
 }
