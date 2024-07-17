@@ -1,5 +1,4 @@
 export class RangeTemperature {
-    minTemperature ? : string;
-    maxTemperature ? : string;
-    
+  minTemperature?: string;
+  maxTemperature?: string;
 }

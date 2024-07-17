@@ -1,84 +1,84 @@
-*{
-    padding: 0;
-    margin: 0;
-  }
+* {
+  padding: 0;
+  margin: 0;
+}
 
 .container {
-    height: 85vh;
-    background-color: #4AD592; 
+  height: 85vh;
+  background-color: #4ad592;
 }
 
 /* FORM */
 
 .flexway {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-temp {
-    text-align: center;
+  text-align: center;
 }
 
-.background-form{
-    padding: 1rem 2rem; 
-    border-radius: 10px;
-    background-color: #D9D9D9;
+.background-form {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  background-color: #d9d9d9;
 }
 
 .input-temp {
-    margin: 10px;
-    border-radius: 10px;
-    border: none;
-    text-align: center;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
 }
 
 .button-save-temp {
-    margin: 20px 0;
-    padding: 5px 20px;
-    border-radius: 5px;
-    border: none;
-    background-color: #53F9A9;
+  margin: 20px 0;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #53f9a9;
 }
 
-.div-form{
-    width: 90%; 
-    height: 60%; 
+.div-form {
+  width: 90%;
+  height: 60%;
 }
 
-.height-form{
-    height: 100%;
+.height-form {
+  height: 100%;
 }
 
-.add-range-text{
-    font-weight: 500;
+.add-range-text {
+  font-weight: 500;
 }
 
-.celsius-degrees{
-    font-style: italic;
+.celsius-degrees {
+  font-style: italic;
 }
 
-.text-message{
-    height: 45px;
-    width: 250px;
+.text-message {
+  height: 45px;
+  width: 250px;
 }
 
 /* RANGO */
 
-.rango{
-    text-align: center; 
-    height: 40%;  
-    width: 100%;
+.rango {
+  text-align: center;
+  height: 40%;
+  width: 100%;
 }
 
-.container-rango{
-    padding: 20px;
-    background: #53F9A9;
-    border-radius: 5px;
+.container-rango {
+  padding: 20px;
+  background: #53f9a9;
+  border-radius: 5px;
 }
 
-.temp-min-max{
-    font-weight: bold;
-    font-size: x-large;
+.temp-min-max {
+  font-weight: bold;
+  font-size: x-large;
 }

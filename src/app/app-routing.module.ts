@@ -4,14 +4,13 @@ import { TemperatureAddComponent } from './components/temperature-add/temperatur
 import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-  { path : 'add-temperature', component: TemperatureAddComponent},
-  { path : 'home', component: HomeComponent},
-  {path: "**", redirectTo: "", component: HomeComponent},
-
+  { path: 'add-temperature', component: TemperatureAddComponent },
+  { path: 'home', component: HomeComponent },
+  { path: '**', redirectTo: '', component: HomeComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

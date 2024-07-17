@@ -1,5 +1,4 @@
 export class Temperature {
-    numberTemperature ? :number;
-    dateRegister? : Date;
-    
+  numberTemperature?: number;
+  dateRegister?: Date;
 }

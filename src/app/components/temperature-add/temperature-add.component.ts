@@ -34,14 +34,16 @@ export class TemperatureAddComponent implements OnInit {
         this.rangeTemperature.maxTemperature = val.maxTemperature;
         this.rangeTemperature.minTemperature = val.minTemperature;
       })
-    )
-    .subscribe();    
+    ).subscribe();    
   }
 
   saveRange(){
     let setRangeTemperature = new RangeTemperature();
     setRangeTemperature.maxTemperature = this.formTemp.value.maxTemp;
     setRangeTemperature.minTemperature = this.formTemp.value.minTemp;
-    this.tempService.setRangeTemperature(setRangeTemperature).subscribe();
+    
+    this.tempService.setRangeTemperature(setRangeTemperature).subscribe(() => {
+      this.getRangeTemperature();
+    });    
   }
 }
